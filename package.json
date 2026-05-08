@@ -1,0 +1,43 @@
+{
+  "name": "sanbercode-final-project-orangehrm",
+  "version": "1.0.0",
+  "description": "Executing automated test coverage for OrangeHRM using Cypress. Created as a SanberCode final project to showcase practical E2E testing methodologies.",
+  "main": "index.js",
+  "scripts": {
+    "cy:run:login": "cypress run --spec 'cypress/e2e/login.feature'",
+    "cy:run:forgot-password": "cypress run --spec 'cypress/e2e/forgotPassword.feature'",
+    "cy:run:dashboard": "cypress run --spec 'cypress/e2e/dashboard.feature'",
+    "cy:run:directory": "cypress run --spec 'cypress/e2e/directory.feature'",
+    "cy:run:headed": "cypress run --headed --browser chrome",
+    "cy:run:regression:headless:chrome": "cypress run --browser chrome --spec 'cypress/e2e/*.feature'",
+    "cy:run:regression:headless:firefox": "cypress run --browser firefox --spec 'cypress/e2e/*.feature'",
+    "cy:run:smoke:headless:chrome": "cypress run --browser chrome --spec 'cypress/e2e/features/login.feature,cypress/e2e/features/dashboard.feature,'",
+    "cy:run:smoke:headless:firefox": "cypress run --browser firefox --spec 'cypress/e2e/features/login/**/*.feature,cypress/e2e/features/dashboard.feature,'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mas-andri/sanbercode-final-project-orangehrm.git"
+  },
+  "keywords": [],
+  "author": "Margono Andri Hastiko",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mas-andri/sanbercode-final-project-orangehrm/issues"
+  },
+  "homepage": "https://github.com/mas-andri/sanbercode-final-project-orangehrm#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^14.0.2",
+    "cypress-xpath": "^2.0.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-on-fix": "^1.1.0",
+    "esbuild": "^0.28.0",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/*.js"
+  }
+}
