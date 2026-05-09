@@ -10,14 +10,14 @@ Feature: Directory Functionality
   @positive @high @DIR-001-TC-039
   Scenario: DIR-001-TC-039 - Search directory by Name
     Given the user is on the Directory page
-    When the user enters name "Sheldon James Plankton" in the search field
+    When the user enters name "Rebecca Harmony" in the search field
     And the user clicks the Search button
-    Then the correct employee "Sheldon James Plankton" should be displayed
+    Then the correct employee "Rebecca Harmony" should be displayed
 
   @positive @medium @DIR-001-TC-040
   Scenario: DIR-001-TC-040 - Search directory by partial Name
     Given the user is on the Directory page
-    When the user enters partial name "Pla" in the search field
+    When the user enters partial name "Reb" in the search field
     And the user clicks the Search button
     Then employees matching the partial name should be displayed
 
@@ -84,7 +84,7 @@ Feature: Directory Functionality
     Given the user is on the Directory page
     When the user selects job title "QA Engineer"
     And the user clicks the Search button
-    When the user clicks on the employee card for "Sheldon James Plankton"
+    When the user clicks on the employee card for "Rebecca Harmony"
     Then the right-side detail panel should be displayed
 
   @positive @low @DIR-002-TC-050
@@ -92,7 +92,7 @@ Feature: Directory Functionality
     Given the user is on the Directory page
     When the user selects job title "QA Engineer"
     And the user clicks the Search button
-    When the user clicks on the employee card for "Sheldon James Plankton"
+    When the user clicks on the employee card for "Rebecca Harmony"
     And the right-side detail panel should be displayed
     When the user clicks the close button on the side panel
     Then the side panel should be collapsed

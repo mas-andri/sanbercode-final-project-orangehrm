@@ -90,7 +90,7 @@ When(
 Then("the user should be redirected to the dashboard", () => {
   cy.wait("@loginRequest").then((interception) => {
     // Verify the login API was called
-    expect(interception.response.statusCode).to.be.oneOf([200, 302]);
+    expect(interception.response.statusCode).to.eq(302);
   });
   loginPage.verifyRedirectedToDashboard();
 });

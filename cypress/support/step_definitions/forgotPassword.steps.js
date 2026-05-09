@@ -21,7 +21,7 @@ Given("the reset password API is intercepted", () => {
 // WHEN Steps
 
 // Click the "Forgot your password?" link on the login page.
-When("the user clicks on {string} link", (linkText) => {
+When("the user clicks on {string} link", () => {
   loginPage.clickForgotPassword();
 });
 
@@ -66,6 +66,6 @@ Then("a reset failed message should be displayed", () => {
 Then(
   "the {string} validation error should be displayed on forgot password page",
   (validationMessage) => {
-    forgotPasswordPage.verifyRequiredFieldError();
+    forgotPasswordPage.verifyRequiredFieldError(validationMessage);
   },
 );

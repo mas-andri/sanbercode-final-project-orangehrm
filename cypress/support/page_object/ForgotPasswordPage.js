@@ -74,8 +74,10 @@ class ForgotPasswordPage {
   }
 
   // Verify 'Required' validation error is displayed.
-  verifyRequiredFieldError() {
-    this.requiredValidation.should("be.visible").and("contain", "Required");
+  verifyRequiredFieldError(validationMessage) {
+    this.requiredValidation
+      .should("be.visible")
+      .and("contain", validationMessage);
   }
 
   // Verify user is redirected back to the login page.
