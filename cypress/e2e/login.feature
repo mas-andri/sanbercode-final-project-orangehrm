@@ -47,7 +47,6 @@ Feature: Login Functionality
 
   # SCN-LOG-002: Verify Login Security
 
-
   @positive @medium @LOG-002-TC-005
   Scenario: LOG-002-TC-005 - Verify password field masks entered characters
     Given the user is on the OrangeHRM login page
